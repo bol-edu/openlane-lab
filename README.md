@@ -331,7 +331,7 @@ List Docker images:
     boledulab/openlane-lab   1.0                                        a4d7bca163b7   14 seconds ago   974MB
     efabless/openlane        daae2154590cf20e0c20b77e3fc02b6526ad09af   80bd52b6e039   2 months ago     974MB
 
-The new Openlane Docker image 'boledulab/openlane-lab:1.0' can be tested:
+Test the new Openlane Docker image 'boledulab/openlane-lab:1.0':
 
     $ cd /home/$USER/OpenLane && \
          docker run --rm -v /home/$USER/OpenLane:/openlane -v /home/$USER/OpenLane/designs:/openlane/install -v /home/$USER/OpenLane/pdks:/home/$USER/OpenLane/pdks \
