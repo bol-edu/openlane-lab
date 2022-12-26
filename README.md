@@ -48,7 +48,7 @@ Get Openlane lab sources form offical github or attached OpenLane.zip:
     
 Build Openlane Docker image:
 
-    $ cd home/$USER/OpenLane/
+    $ cd /home/$USER/OpenLane/
     $ make
 
 Check Openlane Docker image:
