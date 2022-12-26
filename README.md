@@ -42,7 +42,7 @@ Set USER and add it to Docker group (docker command without sudo):
     $ sudo usermod -aG docker $USER
     $ sudo reboot
     
-Get Openlane lab sources:
+Get Openlane lab sources form offical github or unzip attached OpenLane.zip:
 
     $ git clone -b 2022.10.20 --depth 1 https://github.com/The-OpenROAD-Project/OpenLane    
     
