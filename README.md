@@ -63,7 +63,7 @@ We use the RTL design spm located in directory /OpenLane/designs/spm/ as Openlan
 
 Run a Openlane Docker container and login into it:
 
-    $ docker run -it 80bd52b6e039
+    $ docker run -it efabless/openlane:daae2154590cf20e0c20b77e3fc02b6526ad09af
     OpenLane Container (daae215):/openlane$ ls
     AUTHORS.md  configuration  dependencies  designs  env.py  flow.tcl  LICENSE  regression_results  run_designs.py  scripts
     OpenLane Container (daae215):/openlane$ exit
@@ -307,7 +307,7 @@ The Openlane flow [configuration variables](https://openlane.readthedocs.io/en/l
 
 Run Openlane Docker container in background:
 
-    $ docker run -d -it 80bd52b6e039
+    $ docker run -d -it efabless/openlane:daae2154590cf20e0c20b77e3fc02b6526ad09af
     c0b53c50e2a3abaf5f3360f73478e264c83abd18834513d261e64ac2b70d50c1
 
 Query running Docker container and get its CONTAINER ID 'c0b53c50e2a3':
