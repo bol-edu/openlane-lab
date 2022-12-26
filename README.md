@@ -310,17 +310,17 @@ Run Openlane Docker container in background:
     $ docker run -d -it 80bd52b6e039
     c0b53c50e2a3abaf5f3360f73478e264c83abd18834513d261e64ac2b70d50c1
 
-Query running Docker containers:
+Query running Docker container and get its CONTAINER ID 'c0b53c50e2a3':
 
     $ docker ps
     CONTAINER ID   IMAGE          COMMAND                  CREATED         STATUS         PORTS     NAMES
     c0b53c50e2a3   80bd52b6e039   "/bin/sh -c /bin/bash"   7 seconds ago   Up 6 seconds             reverent_chebyshev
 
-Copy modified flow.tcl on host to replace flow.tcl on Docker container:
+Add a test.txt into Docker container:
 
-    $ docker cp /Openlane/flow.tcl c0b53c50e2a3:/openlane/flow.tcl
+    $ echo "Hello OpenLane" > ./test.txt && docker cp ./test.txt c0b53c50e2a3:/openlane/test.txt
 
-Save changed Docker container to another Docker image:
+Save changed Docker container to new Openlane Docker image:
 
     $ docker commit c0b53c50e2a3 boledulab/openlane-lab:1.0
     
@@ -331,13 +331,15 @@ List Docker images:
     boledulab/openlane-lab   1.0                                        a4d7bca163b7   14 seconds ago   974MB
     efabless/openlane        daae2154590cf20e0c20b77e3fc02b6526ad09af   80bd52b6e039   2 months ago     974MB
 
-The IMAGE ID 'a4d7bca163b7' should be different in your lab, the Docker image 'boledulab/openlane-lab:1.0' can be used as follow:
+The IMAGE ID 'a4d7bca163b7' should be different in your lab, the Docker image 'boledulab/openlane-lab:1.0' can be test:
 
     $ cd /home/$USER/OpenLane && \
          docker run --rm -v /home/$USER/OpenLane:/openlane -v /home/$USER/OpenLane/designs:/openlane/install -v /home/$USER/OpenLane/pdks:/home/$USER/OpenLane/pdks \
          -e PDK_ROOT=/home/$USER/OpenLane/pdks -e PDK=sky130A  --user 1000:1000 -e DISPLAY=localhost:10.0 -v /tmp/.X11-unix:/tmp/.X11-unix -v \
-         /home/$USER/.Xauthority:/.Xauthority --network host -ti boledulab/openlane-lab:1.0    
-
+         /home/$USER/.Xauthority:/.Xauthority --network host -ti boledulab/openlane-lab:1.0 cat ./test.txt
+    Hello OpenLane
+    $
+    
 ## Reference
 * OpenLANE: The Open-Source Digital ASIC Implementation Flow: https://woset-workshop.github.io/PDFs/2020/a21.pdf
 * The OpenROAD Project - OpenLane: https://github.com/The-OpenROAD-Project/OpenLane
