@@ -247,7 +247,7 @@ More interactive Openlane [Tcl commands](https://openlane.readthedocs.io/en/late
 
 ## 3. Change component configurations before executing Openlane flow
 
-Change and save configuration in an example synthesis.tcl:
+Change and save configurations in an example synthesis.tcl:
 
     $ cd /home/$USER/OpenLane && \
          docker run --rm -v /home/$USER/OpenLane:/openlane -v /home/$USER/OpenLane/designs:/openlane/install -v /home/$USER/OpenLane/pdks:/home/$USER/OpenLane/pdks \
