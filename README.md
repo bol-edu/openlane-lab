@@ -61,7 +61,7 @@ Check Openlane Docker image:
 
 We use the RTL design spm located in directory /OpenLane/designs/spm/ as Openlane flow import and output result log files of each Openlane flow step.
 
-Run a Openlane Docker container and login into it:
+Test to start/finish an Openlane Docker container:
 
     $ docker run -it efabless/openlane:daae2154590cf20e0c20b77e3fc02b6526ad09af
     OpenLane Container (daae215):/openlane$ ls
