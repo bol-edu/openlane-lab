@@ -5,7 +5,7 @@ The flow performs all ASIC implementation steps from RTL all the way down to GDS
 <img src="https://user-images.githubusercontent.com/11850122/209485649-7a5b0a11-118f-4fed-a699-f44770463c05.png" width=80%>
 
 ## Openlane Lab Purpose
-* Setup a Docker image of Openlane tools
+* Setup a Docker image of Openlane flow
 * Execute Openlane flow in non-interactive/interactive mode
 * Change configuration before executing Openlane flow
 * Create a customized Openlane Docker image
@@ -15,7 +15,7 @@ The flow performs all ASIC implementation steps from RTL all the way down to GDS
 * Docker packages
 * Openlane sources with [tag 2022.10.20](https://github.com/The-OpenROAD-Project/OpenLane/tree/2022.10.20)
 
-## 1. Setup a Docker image of Openlane tools
+## 1. Setup a Docker image of Openlane flow
 
 Install Docker:
 
