@@ -48,7 +48,7 @@ Build Openlane Docker image:
     $ cd /home/$USER/OpenLane/
     $ make
 
-Check Openlane Docker image:
+Check built Openlane Docker image:
 
     $ docker images
     REPOSITORY          TAG                                        IMAGE ID       CREATED        SIZE
