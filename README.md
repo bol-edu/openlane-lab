@@ -6,7 +6,7 @@ OpenLane is an automated RTL to GDSII flow based on several components including
 ## Openlane Lab Purpose
 * Setup a Docker image of Openlane tools
 * Execute Openlane flow in non-interactive/interactive mode
-* How to set configuration of Openlane flow
+* Change configuration before executing Openlane flow
 * Create a customized Openlane Docker image
 
 ## Openlane Lab Prerequisites
@@ -248,7 +248,7 @@ Openlane flow in interactive mode:
 
 More interactive Openlane [Tcl commands](https://openlane.readthedocs.io/en/latest/reference/openlane_commands.html).
 
-## 3. How to set configuration of Openlane flow
+## 3. Change configuration before executing Openlane flow
 
 Change and save configuration in an example synthesis.tcl:
 
@@ -298,10 +298,9 @@ Change and save configuration in an example synthesis.tcl:
     
     :wq!
     
-    OpenLane Container (daae215):/openlane$ exit
-    exit
+    OpenLane Container (daae215):/openlane$    
 
-The Openlane flow [configuration variables](https://openlane.readthedocs.io/en/latest/reference/configuration.html) were defined.
+The Openlane flow defined [configuration variables](https://openlane.readthedocs.io/en/latest/reference/configuration.html).
 
 ## 4. Create a customized Openlane Docker image
 
@@ -333,10 +332,7 @@ List Docker images:
 
 Test the new Openlane Docker image 'boledulab/openlane-lab:1.0':
 
-    $ cd /home/$USER/OpenLane && \
-         docker run --rm -v /home/$USER/OpenLane:/openlane -v /home/$USER/OpenLane/designs:/openlane/install -v /home/$USER/OpenLane/pdks:/home/$USER/OpenLane/pdks \
-         -e PDK_ROOT=/home/$USER/OpenLane/pdks -e PDK=sky130A  --user 1000:1000 -e DISPLAY=localhost:10.0 -v /tmp/.X11-unix:/tmp/.X11-unix -v \
-         /home/$USER/.Xauthority:/.Xauthority --network host -ti boledulab/openlane-lab:1.0 cat ./test.txt
+    $ docker run -it boledulab/openlane-lab:1.0 cat ./test.txt
     Hello OpenLane
     $
     
