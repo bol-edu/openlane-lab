@@ -70,7 +70,7 @@ Openlane flow in non-interactive mode:
 
     $ cd /home/$USER/OpenLane && \
          docker run --rm -v /home/$USER/OpenLane:/openlane -v /home/$USER/OpenLane/designs:/openlane/install -v /home/$USER/OpenLane/pdks:/home/$USER/OpenLane/pdks \
-         -e PDK_ROOT=/home/$USER/OpenLane/pdks -e PDK=sky130A  --user 1000:1000 -e DISPLAY=localhost:10.0 -v /tmp/.X11-unix:/tmp/.X11-unix -v \
+         -e PDK_ROOT=/home/$USER/OpenLane/pdks -e PDK=sky130A --user 1000:1000 -e DISPLAY=localhost:10.0 -v /tmp/.X11-unix:/tmp/.X11-unix -v \
          /home/$USER/.Xauthority:/.Xauthority --network host -ti efabless/openlane:daae2154590cf20e0c20b77e3fc02b6526ad09af    
     OpenLane Container (daae215):/openlane$ sh -c "./flow.tcl -design spm -tag openlane_test -overwrite"  && \
          [ -f ./designs/spm/runs/openlane_test/results/signoff/spm.gds ] && \
@@ -195,7 +195,7 @@ Openlane flow in interactive mode:
 
     $ cd /home/$USER/OpenLane && \
          docker run --rm -v /home/$USER/OpenLane:/openlane -v /home/$USER/OpenLane/designs:/openlane/install -v /home/$USER/OpenLane/pdks:/home/$USER/OpenLane/pdks \
-         -e PDK_ROOT=/home/$USER/OpenLane/pdks -e PDK=sky130A  --user 1000:1000 -e DISPLAY=localhost:10.0 -v /tmp/.X11-unix:/tmp/.X11-unix -v \
+         -e PDK_ROOT=/home/$USER/OpenLane/pdks -e PDK=sky130A --user 1000:1000 -e DISPLAY=localhost:10.0 -v /tmp/.X11-unix:/tmp/.X11-unix -v \
          /home/$USER/.Xauthority:/.Xauthority --network host -ti efabless/openlane:daae2154590cf20e0c20b77e3fc02b6526ad09af    
     OpenLane Container (daae215):/openlane$ sh -c "./flow.tcl -interactive"
     OpenLane daae2154590cf20e0c20b77e3fc02b6526ad09af
@@ -251,7 +251,7 @@ Change and save configurations in an example synthesis.tcl:
 
     $ cd /home/$USER/OpenLane && \
          docker run --rm -v /home/$USER/OpenLane:/openlane -v /home/$USER/OpenLane/designs:/openlane/install -v /home/$USER/OpenLane/pdks:/home/$USER/OpenLane/pdks \
-         -e PDK_ROOT=/home/$USER/OpenLane/pdks -e PDK=sky130A  --user 1000:1000 -e DISPLAY=localhost:10.0 -v /tmp/.X11-unix:/tmp/.X11-unix -v \
+         -e PDK_ROOT=/home/$USER/OpenLane/pdks -e PDK=sky130A --user 1000:1000 -e DISPLAY=localhost:10.0 -v /tmp/.X11-unix:/tmp/.X11-unix -v \
          /home/$USER/.Xauthority:/.Xauthority --network host -ti efabless/openlane:daae2154590cf20e0c20b77e3fc02b6526ad09af
     OpenLane Container (daae215):/openlane$ ls configuration/
     checkers.tcl  cts.tcl  extraction.tcl  floorplan.tcl  general.tcl  load_order.txt  placement.tcl  routing.tcl  synthesis.tcl  
