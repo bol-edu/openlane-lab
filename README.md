@@ -7,7 +7,7 @@ The flow performs all ASIC implementation steps from RTL all the way down to GDS
 ## Openlane Lab Purpose
 * Setup a Docker image of Openlane flow
 * Execute Openlane flow in non-interactive/interactive mode
-* Change configuration before executing Openlane flow
+* Change component configurations before executing Openlane flow
 * Create a customized Openlane Docker image
 
 ## Openlane Lab Prerequisites
@@ -245,7 +245,7 @@ Openlane flow in interactive mode:
 
 More interactive Openlane [Tcl commands](https://openlane.readthedocs.io/en/latest/reference/openlane_commands.html).
 
-## 3. Change configuration before executing Openlane flow
+## 3. Change component configurations before executing Openlane flow
 
 Change and save configuration in an example synthesis.tcl:
 
