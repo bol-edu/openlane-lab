@@ -57,7 +57,7 @@ Check built Openlane Docker image:
 ## 2. Execute Openlane flow in non-interactive/interactive mode
 
 We use the RTL design spm located in directory /OpenLane/designs/spm/src as Openlane flow import and we output result log files of each Openlane flow step.
-Two Openlane configuration files: config.json and pin_order.cfg (optional) are placed in /OpenLane/designs/spm. The configuration variables used in config.json can be referenced from [configuration variables](https://openlane.readthedocs.io/en/latest/reference/configuration.html). The IO placement of pin_order.cfg can be referenced from [IO Placement](https://openlane.readthedocs.io/en/latest/usage/hardening_macros.html#io-placement).
+Two Openlane configuration files: config.json and pin_order.cfg (optional) are placed in /OpenLane/designs/spm. The configuration variables used in config.json can be referenced from [configuration variables](https://openlane.readthedocs.io/en/latest/reference/configuration.html). The pin_order.cfg is set IO placement manually, other IO placement options can be referenced from [IO Placement](https://openlane.readthedocs.io/en/latest/usage/hardening_macros.html#io-placement).
 
     $ cd /home/$USER/OpenLane/designs/spm
     $ ls
