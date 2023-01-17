@@ -98,7 +98,7 @@ Two Openlane configuration files: config.json and pin_order.cfg (optional) are p
         "SYNTH_MAX_FANOUT": 4,
         "PL_TARGET_DENSITY": 0.45
     }
-}
+    }
 
 Test to start/finish an Openlane Docker container:
 
