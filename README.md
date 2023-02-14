@@ -17,7 +17,7 @@ The flow performs all ASIC implementation steps from RTL all the way down to GDS
 
 ## 1. Setup a Docker image of Openlane flow
 
-Install Docker:
+Install Docker Packages (remove old Docker firstly):
 
     $ sudo apt-get update
     $ sudo apt install -y build-essential python3 python3-venv python3-pip make git
