@@ -21,7 +21,7 @@ Install Docker packages (remove old Docker firstly):
 
     $ sudo apt-get update
     $ sudo apt install build-essential python3 python3-venv python3-pip make git -y
-    $ sudo apt-get remove docker docker-engine docker.io containerd runc
+    $ sudo apt-get remove docker docker-engine docker.io containerd runc -y
     $ sudo apt-get update
     $ sudo apt-get install ca-certificates curl gnupg lsb-release -y
     $ sudo mkdir -p /etc/apt/keyrings
