@@ -31,7 +31,7 @@ Install Docker packages (remove old Docker firstly):
     $ sudo apt-get update
     $ sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin -y
     $ sudo docker -v
-    Docker version 20.10.22, build 3a2c30b
+    Docker version 23.0.1, build a5ee5b1
  
 Set USER and add it to Docker group (docker command without sudo):
     
