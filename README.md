@@ -20,7 +20,7 @@ The flow performs all ASIC implementation steps from RTL all the way down to GDS
 Install Docker packages (remove old Docker firstly):
 
     $ sudo apt-get update
-    $ sudo apt install -y build-essential python3 python3-venv python3-pip make git
+    $ sudo apt install build-essential python3 python3-venv python3-pip make git -y
     $ sudo apt-get remove docker docker-engine docker.io containerd runc
     $ sudo apt-get update
     $ sudo apt-get install -y ca-certificates curl gnupg lsb-release
@@ -29,7 +29,7 @@ Install Docker packages (remove old Docker firstly):
     $ echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
          $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
     $ sudo apt-get update
-    $ sudo apt-get install -y docker-ce docker-ce-cli containerd.io docker-compose-plugin
+    $ sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin -y
     $ sudo docker -v
     Docker version 20.10.22, build 3a2c30b
  
