@@ -10,7 +10,7 @@ The flow performs all ASIC implementation steps from RTL all the way down to GDS
 * Change component configurations before executing Openlane flow
 * Create a customized Openlane Docker image
 
-## Openlane Lab Prerequisite
+## Openlane Lab Prerequisites
 * Ubuntu 20.04+
 * Docker packages
 * Openlane [sources with tag 2022.10.20](https://github.com/The-OpenROAD-Project/OpenLane/tree/2022.10.20)
@@ -375,11 +375,11 @@ Test the new Openlane Docker image 'boledulab/openlane-lab:1.0':
     Hello OpenLane
     $
     
-## Reference
+## References
 * [The OpenROAD Project - OpenLane](https://github.com/The-OpenROAD-Project/OpenLane)
 * [The OpenLane Documentation](https://openlane.readthedocs.io/en/latest/index.html)
 
-## Research Paper
+## Research Papers
 * [GHAZI: An Open-Source ASIC Implementation of RISC-V based SoC based SoC, 2022](https://www.techrxiv.org/articles/preprint/GHAZI_An_Open-Source_ASIC_Implementation_of_RISC-V_based_SoC/21770456)
 * [Digital ASIC Implementation of RISC-V: OpenLane and Commercial Approaches in Comparison, 2021](https://ieeexplore.ieee.org/document/9531753)
 * [Building OpenLANE: a 130nm openroad-based tapeout-proven flow, 2020](https://dl.acm.org/doi/abs/10.1145/3400302.3415735?casa_token=qujsTo-b4zcAAAAA:7cgTB9A0rRd1dJ3q-QyZy7KW-Omnd3B3qqXnJzXFMhB3E_Jnv006RMXm7W7gaHXw4gzbQ8G3OxS7Ilo)
