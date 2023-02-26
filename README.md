@@ -10,7 +10,7 @@ The flow performs all ASIC implementation steps from RTL all the way down to GDS
 * Change component configurations before executing Openlane flow
 * Create a customized Openlane Docker image
 
-## Openlane Lab Prerequisites
+## Openlane Lab Prerequisite
 * Ubuntu 20.04+
 * Docker packages
 * Openlane [sources with tag 2022.10.20](https://github.com/The-OpenROAD-Project/OpenLane/tree/2022.10.20)
