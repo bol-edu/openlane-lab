@@ -376,7 +376,6 @@ Test the new Openlane Docker image 'boledulab/openlane-lab:1.0':
     $
     
 ## Reference
-* [OpenLANE: The Open-Source Digital ASIC Implementation Flow](https://woset-workshop.github.io/PDFs/2020/a21.pdf)
 * [The OpenROAD Project - OpenLane](https://github.com/The-OpenROAD-Project/OpenLane)
 * [The OpenLane Documentation](https://openlane.readthedocs.io/en/latest/index.html)
 
