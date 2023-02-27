@@ -33,7 +33,7 @@ Install Docker packages (remove old Docker firstly):
     $ sudo docker -v
     Docker version 23.0.1, build a5ee5b1
  
-Set USER and add it to Docker group (docker command without sudo):
+Set USER and add it to Docker group (docker command without sudo):  
 e.g. boledu@HLS:~$, yourusername = boledu
     
     $ USER=yourusername
