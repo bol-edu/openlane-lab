@@ -376,6 +376,8 @@ Test the new Openlane Docker image 'boledulab/openlane-lab:1.0':
     Hello OpenLane
     $
     
+The same way as above, you can update synthesis.tcl, routing.tcl, ... in your own configured Openlane docker image.
+
 ## References
 * [The OpenROAD Project - OpenLane](https://github.com/The-OpenROAD-Project/OpenLane)
 * [The OpenLane Documentation](https://openlane.readthedocs.io/en/latest/index.html)
