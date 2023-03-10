@@ -359,7 +359,7 @@ copy customized synthesis.tcl into Docker container:
     $ docker cp ./synthesis.tcl c0b53c50e2a3:/openlane/configuration/synthesis.tcl
     $ cat ./synthesis.tcl
     #
-    # Updated openlane synthesis.tcl by boledulab
+    # customized openlane synthesis configurations by boledulab
     # Synth defaults
     #
     set ::env(SYNTH_BIN) yosys
