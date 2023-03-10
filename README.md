@@ -333,7 +333,6 @@ Change and save configurations in an example synthesis.tcl:
     set ::env(SYNTH_FLAT_TOP) 0
     set ::env(IO_PCT) 0.2
     set ::env(SYNTH_EXTRA_MAPPING_FILE) ""
-
     set ::env(BASE_SDC_FILE) $::env(SCRIPTS_DIR)/base.sdc
     
     :wq!
@@ -355,9 +354,33 @@ Query running Docker container and get its CONTAINER ID 'c0b53c50e2a3':
     CONTAINER ID   IMAGE          COMMAND                  CREATED         STATUS         PORTS     NAMES
     c0b53c50e2a3   80bd52b6e039   "/bin/sh -c /bin/bash"   7 seconds ago   Up 6 seconds             reverent_chebyshev
 
-Add a test.txt into Docker container:
+copy customized synthesis.tcl into Docker container:
 
-    $ echo "Hello OpenLane" > ./test.txt && docker cp ./test.txt c0b53c50e2a3:/openlane/test.txt
+    $ docker cp ./synthesis.tcl c0b53c50e2a3:/openlane/configuration/synthesis.tcl
+    $ cat ./synthesis.tcl
+    #
+    # Updated openlane synthesis.tcl by boledulab
+    # Synth defaults
+    #
+    set ::env(SYNTH_BIN) yosys
+    set ::env(SYNTH_SCRIPT) $::env(SCRIPTS_DIR)/yosys/synth.tcl
+    set ::env(SYNTH_NO_FLAT) 0
+    set ::env(SYNTH_CLOCK_UNCERTAINTY) 0.25
+    set ::env(SYNTH_CLOCK_TRANSITION) 0.15
+    set ::env(SYNTH_TIMING_DERATE) 0.05
+    set ::env(SYNTH_SHARE_RESOURCES) 1
+    set ::env(SYNTH_BUFFERING) 1
+    set ::env(SYNTH_SIZING) 0
+    set ::env(SYNTH_MAX_FANOUT) 5
+    set ::env(SYNTH_STRATEGY) "AREA 0"
+    set ::env(SYNTH_ADDER_TYPE) "YOSYS"
+    set ::env(CLOCK_BUFFER_FANOUT) 16
+    set ::env(SYNTH_READ_BLACKBOX_LIB) 0
+    set ::env(SYNTH_ELABORATE_ONLY) 1
+    set ::env(SYNTH_FLAT_TOP) 1
+    set ::env(IO_PCT) 0.2
+    set ::env(SYNTH_EXTRA_MAPPING_FILE) ""
+    set ::env(BASE_SDC_FILE) $::env(SCRIPTS_DIR)/base.sdc
 
 Save changed Docker container to new Openlane Docker image:
 
@@ -369,14 +392,8 @@ List Docker images:
     REPOSITORY               TAG                                        IMAGE ID       CREATED          SIZE
     boledulab/openlane-lab   1.0                                        a4d7bca163b7   14 seconds ago   974MB
     efabless/openlane        daae2154590cf20e0c20b77e3fc02b6526ad09af   80bd52b6e039   2 months ago     974MB
-
-Test the new Openlane Docker image 'boledulab/openlane-lab:1.0':
-
-    $ docker run -it boledulab/openlane-lab:1.0 cat ./test.txt
-    Hello OpenLane
-    $
     
-The same way as above, you can update synthesis.tcl, routing.tcl, ... in your own configured Openlane docker image.
+The same way as above, you can update routing.tcl, placement.tcl, ... in your own configured Openlane docker image.
 
 ## References
 * [The OpenROAD Project - OpenLane](https://github.com/The-OpenROAD-Project/OpenLane)
