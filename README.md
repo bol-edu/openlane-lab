@@ -240,6 +240,8 @@ Openlane flow in interactive mode:
          docker run --rm -v /home/$USER/OpenLane:/openlane -v /home/$USER/OpenLane/designs:/openlane/install -v /home/$USER/OpenLane/pdks:/home/$USER/OpenLane/pdks \
          -e PDK_ROOT=/home/$USER/OpenLane/pdks -e PDK=sky130A --user 1000:1000 -e DISPLAY=localhost:10.0 -v /tmp/.X11-unix:/tmp/.X11-unix -v \
          /home/$USER/.Xauthority:/.Xauthority --network host -ti efabless/openlane:daae2154590cf20e0c20b77e3fc02b6526ad09af    
+    OpenLane Container (daae215):/openlane$  
+
     OpenLane Container (daae215):/openlane$ sh -c "./flow.tcl -interactive"
     OpenLane daae2154590cf20e0c20b77e3fc02b6526ad09af
     All rights reserved. (c) 2020-2022 Efabless Corporation and contributors.
