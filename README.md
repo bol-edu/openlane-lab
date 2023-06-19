@@ -398,8 +398,11 @@ List Docker images:
 The same way as above, you can update routing.tcl, placement.tcl, ... in your own configured Openlane docker image.
 
 ## References
+* [OpenROAD](https://openroad.readthedocs.io/_/downloads/en/latest/pdf/)
 * [The OpenROAD Project - OpenLane](https://github.com/The-OpenROAD-Project/OpenLane)
 * [The OpenLane Documentation](https://openlane.readthedocs.io/en/latest/index.html)
+* [Yosys Open SYnthesis Suite :: Documentation - YosysHQ](https://yosyshq.net/yosys/documentation.html)
+* [OpenSTA engine - Parallax Static Timing Analyzer](https://github.com/The-OpenROAD-Project/OpenSTA)
 
 ## Research Papers
 * [GHAZI: An Open-Source ASIC Implementation of RISC-V based SoC based SoC, 2022](https://www.techrxiv.org/articles/preprint/GHAZI_An_Open-Source_ASIC_Implementation_of_RISC-V_based_SoC/21770456)
